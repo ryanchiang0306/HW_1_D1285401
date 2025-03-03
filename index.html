@@ -3,58 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>網站維護中</title>
+    <title>GitHub 當機中</title>
     <style>
         body {
+            background-color: #0D1117;
+            color: #C9D1D9;
+            font-family: -apple-system, BlinkMacSystemFont, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f8f8f8;
-            font-family: Arial, sans-serif;
             text-align: center;
-            color: #333;
         }
+
         h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 2rem;
         }
+
         p {
-            font-size: 16px;
+            font-size: 1.2rem;
             margin-bottom: 20px;
         }
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid #ddd;
-            border-top: 4px solid #333;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
+
+        .octocat {
+            width: 150px;
+            animation: float 2s infinite ease-in-out;
+            filter: invert(100%);
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
         }
+
         .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #333;
+            background-color: #238636;
             color: #fff;
-            text-decoration: none;
+            padding: 10px 20px;
+            border: none;
             border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
             transition: 0.3s;
         }
+
         .btn:hover {
-            background-color: #555;
+            background-color: #2ea043;
         }
     </style>
 </head>
 <body>
-    <h1>我們正在維護中</h1>
-    <p>請稍後再試，感謝您的耐心等候。</p>
-    <div class="spinner"></div>
-    <a href="" class="btn" onclick="location.reload();">重新整理</a>
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Octocat" class="octocat">
+    <h1>GitHub 目前暫時無法使用</h1>
+    <p>我們的工程師正在努力修復，請稍後再試！</p>
+    <button class="btn" onclick="location.reload()">重新整理</button>
 </body>
 </html>
